@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="snow-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#E0E0E0;stop-opacity:0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#B0C4DE"/>
+  <!-- Snow-capped mountains -->
+  <path d="M0 250 L200 100 L400 300 L600 50 L800 200 L800 600 L0 600 Z" fill="#4A4A4A"/>
+  <path d="M0 200 L200 50 L400 250 L600 0 L800 150 L800 300 L600 150 L400 400 L200 200 L0 350 Z" fill="url(#snow-gradient)"/>
+  <!-- Clouds -->
+  <g opacity="0.8" fill="#FFFFFF">
+    <circle cx="100" cy="100" r="30"/>
+    <circle cx="130" cy="100" r="35"/>
+    <circle cx="160" cy="100" r="25"/>
+    
+    <circle cx="600" cy="150" r="35"/>
+    <circle cx="630" cy="150" r="40"/>
+    <circle cx="660" cy="150" r="30"/>
+  </g>
+  <!-- Pass trail -->
+  <path d="M300 600 Q400 400 500 500 T700 400" stroke="#8B4513" stroke-width="8" fill="none" opacity="0.7"/>
+  <!-- Small details -->
+  <g fill="#8B4513" opacity="0.6">
+    <circle cx="350" cy="450" r="5"/>
+    <circle cx="450" cy="480" r="4"/>
+    <circle cx="550" cy="420" r="6"/>
+    <circle cx="650" cy="440" r="5"/>
+  </g>
+</svg>
