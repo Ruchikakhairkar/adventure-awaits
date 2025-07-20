@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import heroImage from '../assets/hero-bg.svg';
+import herovideo from '../assets/video.mp4';
 
 const Home = () => {
   useEffect(() => {
@@ -42,7 +42,16 @@ const Home = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative h-screen">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }} />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={herovideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black bg-opacity-50" /> {/* Overlay for better text visibility */}
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-2xl" data-aos="fade-up">
             <h1 className="text-5xl md:text-6xl mb-6">Adventure Awaits – Find Your Next Trek</h1>
@@ -52,6 +61,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Rest of the component remains the same */}
       {/* Why Choose Us Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">

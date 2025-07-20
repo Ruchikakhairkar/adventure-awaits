@@ -23,7 +23,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2">
               <li className="flex items-center gap-2">
-                <FaPhone /> +1 234 567 890
+                <FaPhone /> 9860022669
               </li>
               <li className="flex items-center gap-2">
                 <FaEnvelope /> info@adventureawaits.com
@@ -35,13 +35,13 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
-              <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="hover:text-green-400">
+              <a href="https://wa.me/9860022669" target="_blank" rel="noopener noreferrer" className="hover:text-green-400">
                 <FaWhatsapp size={24} />
               </a>
-              <a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400">
+              <a href="https://instagram.com/the_adventure.awaits" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400">
                 <FaInstagram size={24} />
               </a>
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+              <a href="" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
                 <FaEarthAmericas size={24} />
               </a>
             </div>

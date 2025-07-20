@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/adventure-awaits-logo.jpg';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { FaEarthAmericas } from 'react-icons/fa6';
 
@@ -10,7 +11,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-nature-green">Adventure Awaits</Link>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Adventure Awaits Logo" className="h-12" />
+          </Link>
           
           <div className="hidden md:flex items-center space-x-6">
             <Link to="/" className="nav-link">Home</Link>
@@ -21,13 +24,13 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-green-500">
+            <a href="https://wa.me/9860022669" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-green-500">
               <FaWhatsapp size={20} />
             </a>
-            <a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-500">
+            <a href="https://instagram.com/the_adventure.awaits" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-500">
               <FaInstagram size={20} />
             </a>
-            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500">
+            <a href=" " target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500">
               <FaEarthAmericas size={20} />
             </a>
           </div>
@@ -63,13 +66,13 @@ const Navbar = () => {
             <Link to="/profile" className="nav-link block px-2 py-1 text-gray-600 hover:text-nature-green" onClick={() => setIsOpen(false)}>Profile</Link>
             
             <div className="flex space-x-4 px-2 pt-2 border-t border-gray-200">
-              <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-green-500">
+              <a href="https://wa.me/+919860022669" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-green-500">
                 <FaWhatsapp size={20} />
               </a>
-              <a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-500">
+              <a href="https://instagram.com/the_adventure.awaits" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-500">
                 <FaInstagram size={20} />
               </a>
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500">
+              <a href="" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500">
                 <FaEarthAmericas size={20} />
               </a>
             </div>
