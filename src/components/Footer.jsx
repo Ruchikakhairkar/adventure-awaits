@@ -26,7 +26,7 @@ const Footer = () => {
                 <FaPhone /> 9860022669
               </li>
               <li className="flex items-center gap-2">
-                <FaEnvelope /> info@adventureawaits.com
+                <FaEnvelope /> theadventureawaits@gmail.com
               </li>
             </ul>
           </div>

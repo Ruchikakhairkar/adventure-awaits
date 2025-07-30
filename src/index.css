@@ -26,4 +26,27 @@
   .trek-card {
     @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300;
   }
+   .section-container {
+    @apply py-16 md:py-24;
+  }
+   .content-container {
+    @apply container mx-auto px-4 md:px-8 lg:px-16 xl:px-24 max-w-7xl;
+  }
+
+   /* Hero section specific container that doesn't have the extra side margins */
+  .hero-container {
+    @apply container mx-auto px-4;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12;
+  }
+  
+  .section-inner {
+    @apply container mx-auto px-4 md:px-8;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12;
+  }
 }

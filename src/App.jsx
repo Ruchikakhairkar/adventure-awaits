@@ -10,6 +10,7 @@ import SouthTrip from './pages/SouthTrip';
 import NorthTrip from './pages/NorthTrip';
 import WeekendTrip from './pages/WeekendTrip';
 import Profile from './pages/Profile';
+import TrekDetails from './pages/TrekDetails';
 
 function App() {
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/north-trip" element={<NorthTrip />} />
             <Route path="/weekend-trip" element={<WeekendTrip />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/trek/:trekId" element={<TrekDetails />} />
           </Routes>
         </main>
         <Footer />

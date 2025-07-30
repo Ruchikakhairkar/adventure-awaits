@@ -11,7 +11,7 @@ const TripPage = ({ title, treks }) => {
 
   return (
     <div className="pt-24 pb-16">
-      <div className="container mx-auto px-4">
+      <div className="content-container">
         <h1 className="text-4xl font-bold text-center mb-8">{title}</h1>
 
         {/* Difficulty Filter */}

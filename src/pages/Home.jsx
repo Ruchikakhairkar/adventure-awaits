@@ -1,7 +1,11 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import herovideo from '../assets/video.mp4';
+import hampiImg from '../assets/Hampi.jpg';
+import gokarnaImg from '../assets/gokarna.jpg';
+import yanacavesImg from '../assets/Yana-caves.jpg';
 
 const Home = () => {
   useEffect(() => {
@@ -13,28 +17,27 @@ const Home = () => {
 
   const upcomingTreks = [
     {
-      id: 1,
-      title: 'Valley of Flowers Trek',
-      location: 'Uttarakhand',
-      duration: '6 Days',
-      price: '$599',
-      image: new URL('../assets/valley-of-flowers.svg', import.meta.url).href
-    },
+    id: 1,
+    title: 'Hampi & Hippie Island Trip',
+    location: 'Karnataka',
+    duration: '2 Days & 3 Nights',
+    price: '₹7,799 / person',
+    image: hampiImg
+  },
     {
       id: 2,
-      title: 'Hampta Pass Trek',
-      location: 'Himachal Pradesh',
-      duration: '5 Days',
-      price: '$499',
-      image: new URL('../assets/hampta-pass.svg', import.meta.url).href
+      title: 'Gokarna Trip',
+      location: 'Karnataka ',
+      duration: '2 Days & 3 Nights',
+      price: '₹7,299 / person',
+      image: gokarnaImg
     },
     {
       id: 3,
-      title: 'Kudremukh Trek',
-      location: 'Karnataka',
-      duration: '2 Days',
-      price: '$199',
-      image: new URL('../assets/kudremukh.svg', import.meta.url).href
+      title: 'Hampi, Gokarna & Jog Falls Trip',
+      duration: '4 Days & 5 Nights',
+      price: '₹10,999 / person',
+      image: yanacavesImg
     }
   ];
 
@@ -52,7 +55,7 @@ const Home = () => {
           <source src={herovideo} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-50" /> {/* Overlay for better text visibility */}
-        <div className="relative container mx-auto px-4 h-full flex items-center">
+        <div className="relative hero-container px-4 h-full flex items-center">
           <div className="text-white max-w-2xl" data-aos="fade-up">
             <h1 className="text-5xl md:text-6xl mb-6">Adventure Awaits – Find Your Next Trek</h1>
             <p className="text-xl mb-8">Discover breathtaking trails and unforgettable experiences with our expert-guided treks.</p>
@@ -61,11 +64,48 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Rest of the component remains the same */}
+      
+      {/* Upcoming Treks Section */}
+      <section className="section-container">
+        <div className="content-container">
+         <h2
+  className="section-title text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-gray-200 to-green-600"
+  data-aos="fade-up"
+>
+  Independence Day Special Trips
+</h2>
+
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {upcomingTreks.map((trek) => (
+              <div key={trek.id} className="trek-card" data-aos="fade-up" data-aos-delay={trek.id * 100}>
+                <div className="relative h-64 bg-gray-200">
+                  <img
+                    src={trek.image}
+                    alt={trek.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-xl font-bold mb-2">{trek.title}</h3>
+                  <p className="text-gray-600 mb-2">{trek.location}</p>
+                  <div className="flex justify-between items-center">
+                    <span>{trek.duration}</span>
+                    <span className="text-nature-green font-bold">{trek.price}</span>
+                  </div>
+                  <Link to={`/trek/${trek.id}`} className="btn-primary w-full mt-4 block text-center">View Details</Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+{/* Rest of the component remains the same */}
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl text-center mb-12" data-aos="fade-up">Why Choose Us</h2>
+      <section className=" bg-gray-50 px-16 py-16">
+        <div className="container px-16">
+          <h2 className="section-title " data-aos="fade-up">Why Choose Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6" data-aos="fade-up" data-aos-delay="100">
               <div className="bg-nature-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -98,34 +138,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Upcoming Treks Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl text-center mb-12" data-aos="fade-up">Upcoming Treks</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {upcomingTreks.map((trek) => (
-              <div key={trek.id} className="trek-card" data-aos="fade-up" data-aos-delay={trek.id * 100}>
-                <div className="relative h-48 bg-gray-200">
-                  <img
-                    src={trek.image}
-                    alt={trek.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2">{trek.title}</h3>
-                  <p className="text-gray-600 mb-2">{trek.location}</p>
-                  <div className="flex justify-between items-center">
-                    <span>{trek.duration}</span>
-                    <span className="text-nature-green font-bold">{trek.price}</span>
-                  </div>
-                  <button className="btn-primary w-full mt-4">View Details</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 };

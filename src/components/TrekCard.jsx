@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const TrekCard = ({ image, title, location, duration, price, difficulty }) => {
+const TrekCard = ({ id, image, title, location, duration, price, difficulty }) => {
   const difficultyColor = {
     easy: 'bg-green-100 text-green-800',
     moderate: 'bg-yellow-100 text-yellow-800',
@@ -29,7 +30,7 @@ const TrekCard = ({ image, title, location, duration, price, difficulty }) => {
           <span className="text-nature-green font-bold">{price}</span>
         </div>
         <div className="flex space-x-2">
-          <button className="btn-primary flex-1">View Details</button>
+          <Link to={`/trek/${id}`} className="btn-primary flex-1 text-center">View Details</Link>
           <button className="bg-nature-brown text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-all duration-300 flex-1">
             Book Now
           </button>
@@ -40,6 +41,7 @@ const TrekCard = ({ image, title, location, duration, price, difficulty }) => {
 };
 
 TrekCard.propTypes = {
+  id: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
